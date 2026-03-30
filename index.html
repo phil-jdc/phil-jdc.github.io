@@ -1,11 +1,194 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Phil Crowley</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Philip Crowley's Research Page</title>
+  <style>
+    body {
+      font-family: Georgia, "Times New Roman", Times, serif;
+      color: #111;
+      line-height: 1.6;
+      background: #fff;
+      margin: 0;
+      padding: 0;
+    }
+
+    .page {
+      max-width: 760px;
+      margin: 40px auto;
+      padding: 0 24px;
+    }
+
+    h1, h2 {
+      font-weight: normal;
+      margin-top: 0;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    h2 {
+      font-size: 1.35rem;
+      margin-top: 2rem;
+      margin-bottom: 0.75rem;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid #999;
+      margin: 1rem 0;
+    }
+
+    nav {
+      font-size: 1rem;
+    }
+
+    nav a {
+      color: #111;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    nav .sep,
+    .useful-links .sep {
+      color: #666;
+      margin: 0 0.35rem;
+    }
+
+    a {
+      color: #0645ad;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .intro {
+      display: flex;
+      gap: 2rem;
+      align-items: flex-start;
+      margin-top: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .intro-text {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .intro-text p {
+      margin-top: 0;
+    }
+
+    .useful-links {
+      margin-top: 1rem;
+    }
+
+    .photo {
+      width: 170px;
+      flex-shrink: 0;
+    }
+
+    .photo img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border: 1px solid #ccc;
+    }
+
+    .section {
+      margin-top: 2rem;
+    }
+
+    @media (max-width: 700px) {
+      .intro {
+        flex-direction: column-reverse;
+      }
+
+      .photo {
+        width: 220px;
+      }
+    }
+  </style>
 </head>
 <body>
-  <h1>Phil Crowley</h1>
-  <p>This is my website.</p>
+  <div class="page">
+
+    <header id="home">
+      <h1>Philip Crowley's Research Page</h1>
+    </header>
+
+    <hr>
+
+    <nav>
+      <a href="#home">Home</a>
+      <span class="sep">/</span>
+      <a href="#about">About</a>
+      <span class="sep">/</span>
+      <a href="#cv">CV</a>
+      <span class="sep">/</span>
+      <a href="#papers">Papers</a>
+    </nav>
+
+    <hr>
+
+    <section class="intro" id="about">
+      <div class="intro-text">
+        <p>
+          I am Assistant Professor of Physics at Michigan State University.
+        </p>
+
+        <div class="useful-links">
+          <a href="mailto:crowl131@msu.edu">email</a>
+          <span class="sep">/</span>
+          <a href="https://arxiv.org/search/?query=philip+crowley&searchtype=all&source=header" target="_blank" rel="noopener noreferrer">arXiv</a>
+          <span class="sep">/</span>
+          <a href="https://scholar.google.com/citations?user=FvCmptAAAAAJ" target="_blank" rel="noopener noreferrer">google scholar</a>
+          <span class="sep">/</span>
+          <a href="https://orcid.org/my-orcid?orcid=0000-0002-9836-7569" target="_blank" rel="noopener noreferrer">orcid</a>
+        </div>
+      </div>
+
+      <div class="photo">
+        <img src="photo.jpg" alt="Photo of Philip Crowley">
+      </div>
+    </section>
+    
+
+    <section class="section">
+      <hr>
+      <h2>Research</h2>
+      <hr>
+      <p>
+        Add your research overview here.
+      </p>
+    </section>
+
+    <section class="section" id="cv">
+      <hr>
+      <h2>CV</h2>
+      <hr>
+      <p>
+        <a href="cv.pdf" target="_blank" rel="noopener noreferrer">Curriculum Vitae</a>
+      </p>
+    </section>
+
+    <section class="section" id="papers">
+      <hr>
+      <h2>Papers</h2>
+      <hr>
+      <p>
+        Add links or selected papers here.
+      </p>
+    </section>
+
+  </div>
 </body>
 </html>
