@@ -1,0 +1,298 @@
+<section class="section" id="research">
+	<div class="media-text prose">
+	<hr>
+	<h2>Research</h2>
+	<hr>
+
+	<div class="media-right">
+	  <div class="media-text prose">
+	    <p>
+	      I work at the interface of condensed matter physics and quantum information science, and am particularly interested in non-equilibrium quantum systems. My research focuses on how quantum mechanics gives rise to surprising collective phenomena at macroscopic scales, and on finding ways to harness these effects in new technological applications, such as quantum computers, or quantum sensors.
+	    </p>
+	  </div>
+
+<!-- 	  <div class="media-figure square" style="width: 130px; align-self: center;">
+	    <img src="images/quantum.png" style="width: 130px; height: 140px; object-fit: contain;">
+	  </div> -->
+	</div>
+
+	<h3>Quantum sensing</h3>
+
+	<p>
+        Entangled many-body states can push measurement precision beyond classical limits. I am interested in how to develop sensing protocols that achieve this using only the coarse tools available in experimental many-body systems, particularly cold atoms and solid-state platforms.
+    </p>
+
+	<div class="media-right">
+	    <div class="media-text prose">
+	        <p>
+	    		Recently I have focussed on spin squeezing, a particular class of protocols for generating highly entangled states for quantum metrology. Squeezing has previously been studied due to simplicity, and realisability in AMO systems, however I have focussed on its scalability in non-ideal settings: can squeezing remain effective in systems of large numbers of atoms, molecules or colour centres? My work explores the thermodynamic stability of squeezing protocols, and in particular whether disorder and decoherence present a dynamical obstruction to squeezing at scale.
+    		</p>
+	    </div>
+
+	    <figure class="media-figure square" style="width: 300px; align-self: center;">
+	        <img src="images/cold_atoms_measurement.png" alt="Entangled measurements" style="width: 300px; height: auto; object-fit: contain; align-self: center;">
+	        <figcaption>A pulse protocol for generating entangled states of lithium atoms for quantum measurement, <a href="https://doi.org/10.1103/jqvz-kpwg" target="_blank">in collaboration with Ketterle group</a>.</figcaption>
+	    </figure>
+	</div>
+
+	<!-- <details>
+	    <summary>What is Quantum Sensing?</summary>
+	    <p>
+	        Two central features of quantum mechanics are intrinsic randomness and entanglement. Interestingly, the first presents a serious problem for precision measurement, while the second provides a solution.
+	    </p>
+
+	    <div class="media-left">
+	        <div class="media-text prose">
+	            <p>
+	                We are familiar with randomness in our day-to-day lives, but this familiar randomness is mostly a symptom of our own lack of knowledge. A dice roll might seem random, but it is intuitive that we could reliably predict its outcome given perfect knowledge of the entire event, including the dice (its speed, angular momentum, air resistance, etc.), the air it moves through (wind speed, humidity, microscopic turbulence, etc.), and the surface it bounces off (hardness, etc.).
+	            </p>
+	        </div>
+
+	        <figure class="media-figure round" style="width: 200px; align-self: center;">
+	            <img src="images/dice.jpg" style="width: 200px; height: auto;">
+	            <figcaption>Classical randomness</figcaption>
+	        </figure>
+	    </div>
+
+	    <p>
+	    	Indeed, we would be remarkably impressed by a finely calibrated machine that made careful measurements of atmospheric conditions, and the angle and speed of your dice throws, before reliably predicting their outcomes before the dice had finished bouncing, but it would not obviously violate the laws of physics. <a href="https://www.theguardian.com/science/2004/mar/23/sciencenews.crime" target="_blank">In a famous example</a>, a similar device has been employed at the roulette table.
+	    </p>
+
+	    <div class="media-right">
+	        <div class="media-text prose">
+	            <p>
+	                However, quantum mechanics tells a different story: even with perfect knowledge of the state of the "quantum dice", there are measurements that cannot have a reliable outcome. This effect has been observed with quantum spins playing the role of the dice. This randomness was surprising to early researchers in quantum mechanics, including Einstein, who famously dismissed this possibility outright, saying "God doesn't play dice."
+	            </p>
+	        </div>
+
+	        <figure class="media-figure round" style="width: 300px; align-self: center;">
+	            <img src="images/god_dice.png" alt="God defying Einstein" style="width: 300px; height: 300px;">
+	            <figcaption>Randomness is a fundamental feature of quantum mechanics</figcaption>
+	        </figure>
+	    </div>
+
+	    <p>
+	        In the field of metrology (the study of high-precision measurement), this effect presents a problem: this randomness leads to noisy measurements (so-called "quantum shot noise"), limiting their precision. A well-known example of this was at the Laser Interferometer Gravitational-Wave Observatory (LIGO), where <a href="https://doi.org/10.1038/nphys2083" target="_blank">gravitational wave measurements are limited by quantum shot noise</a>.
+	    </p>
+
+	    <div class="media-left">
+	        <div class="media-text prose">
+	            <p>
+	                The solution is to use entanglement, the intrinsically non-classical correlations in quantum mechanics. These also irked Einstein, who dismissed the phenomenon as "spooky action at a distance" (Einstein was a bit of a quantum sceptic). Entanglement allows you to take measurements where this quantum shot noise is anti-correlated, leading to cancellation of the noise and lower error in high-precision measurements.
+	            </p>
+	        </div>
+
+	        <figure class="media-figure square" style="width: 200px; align-self: center;">
+	        	<img src="images/entangled_measurement.png" alt="Entangled measurements" style="width: 200px; height: auto; object-fit: contain;">
+	        	<figcaption>A measurement on a quantum state $|\psi\rangle$ consisting of two entangled quantum systems.</figcaption>
+	   	 	</figure>
+	    </div>
+
+	    <p>
+	        Entanglement leads to a quantifiable improvement in precision. When making a measurement of some parameter
+	        $$
+	            \theta = \text{parameter being measured},
+	        $$
+	        which could be anything, the strength of a magnetic field, the length of a laser cavity, <a href="https://www.nature.com/articles/075450a0" target="_blank">or the weight of an Ox</a>. However, inevitable noise leads to an error on your measurement
+	        $$
+	            \Delta \theta = \text{measurement error}.
+	        $$
+	        When this noise is primarily due to quantum shot noise, it can be mitigated using quantum entanglement. The quantum shot noise can be suppressed by performing $N$ repeat measurements, but this suppression is significantly greater when the measurements are entangled
+	        $$
+	            \Delta \theta_{\mathrm{classical}} \sim \frac{1}{\sqrt{N}}, \qquad \qquad \Delta \theta_{\mathrm{quantum}} \sim \frac{1}{N}.
+	        $$
+	        This is the core idea of quantum measurement. For a more quantitative account of this core idea, see <a href="https://doi.org/10.1103/PhysRevLett.96.010401" target="_blank">Giovannetti et al. 2006</a>. Beyond this, <a href="https://doi.org/10.1103/RevModPhys.89.035002" target="_blank">Degen et al. 2017</a> provides a more recent account of the research landscape, and <a href="https://doi.org/10.1103/RevModPhys.90.035005" target="_blank">Pezze et al. 2018</a> its application to many-body atomic systems.
+	    </p>
+	</details> -->
+
+	<h4>Selected works</h4>
+
+	<ul>
+        <li>
+            <a href="https://doi.org/10.48550/arXiv.2512.19781" target="_blank">Theory of Scalable Spin Squeezing with Disordered Quantum Dipoles</a><br/>
+            A Kaplan-Lipkin, PJD Crowley, JN Hallén, Z Wang, W Wu, S Chern, CR Laumann, L Pollet, NY Yao<br/>
+            <em>arXiv:2512.19781</em>
+        </li>
+        <li>
+            <a href="https://doi.org/10.1103/jqvz-kpwg" target="_blank">Observation of spin squeezing with contact interactions in one- and three-dimensional easy-plane magnets</a><br/>
+            YK Lee, M Block, H Lin, V Fedoseev, PJD Crowley, NY Yao, W Ketterle<br/>
+            <em>Physical Review Letters</em>, 135(2), 023402 (2025)
+        </li>
+        <li>
+            <a href="https://doi.org/10.1103/PhysRevA.89.023845" target="_blank">
+                Trade-off in simultaneous quantum-limited phase and loss estimation in interferometry
+            </a><br/>
+            PJD Crowley, A Datta, M Barbieri, I Walmsley<br/>
+            <em>Physical Review A</em>, 89(2), 023845 (2014)
+        </li>
+    </ul>
+
+	<h3>Quantum chaos, ergodicity breaking, and localization</h3>
+
+	<div class="media-right">
+	    <div class="media-text prose">
+          <p>
+	        A glass of pure water has $\sim 10^{25}$ molecules in it, and yet can be described for all practical purposes by a single quantity: its temperature. Our ability to describe such a complex, chaotic system so simply is due to "thermalisation": systems gravitate towards a simplified description, based on statistical mechanics, and forget unimportant details about their history.
+	   		 </p>
+	        <p>
+	            Remarkably, in some cases, the assumptions of quantum statistical mechanics are violated. One such example is many-body localization, where strong disorder causes a quantum system to fail to thermalize, retaining memory of its initial conditions indefinitely.
+	        </p>
+	    </div>
+
+	    <figure class="media-figure square" style="width: 300px; align-self: center;">
+	        <img src="images/resonances.png" alt="Percolation of resonances" style="width: 300px; height: auto; object-fit: contain;">
+	        <figcaption><a href="https://doi.org/10.21468/SciPostPhys.12.6.201" target="_blank">Our theory</a> of the observed localisation-thermal crossover suggests it is controlled by the percolation of resonances</figcaption>
+	    </figure>
+	</div>
+
+	<p>
+	    My research has focused on developing an understanding of when and how localization happens, when it is stable, when it is not, and how it breaks down in critical systems.
+	</p>
+
+	<figure class="media-figure rect" style="width: 100%; max-width: 600px; margin-left: auto; margin-right: auto;">
+	    <img src="images/C60.png" alt="C60 rotational energy landscape">
+	    <figcaption>The changing energy landscape of $\mathrm{C}_{60}$ rotational states, and a <a href="https://doi.org/10.1126/science.adi6354" target="_blank">crossover to non-ergodicity</a>.</figcaption>
+	</figure>
+
+	<h4>Selected works</h4>
+	<ul>
+		<li>
+		    <a href="https://doi.org/10.1126/science.adi6354" target="_blank">Ergodicity breaking in rapidly rotating C<sub>60</sub> fullerenes</a><br/>
+		    LR Liu, D Rosenberg, PB Changala, PJD Crowley, DJ Nesbitt, NY Yao, T Tscherbul, J Ye<br/>
+		    <em>Science</em>, 381(6659), 778–783 (2023)
+		</li>
+		<li>
+		    <a href="https://doi.org/10.21468/SciPostPhys.12.6.201" target="_blank">A constructive theory of the numerically accessible many-body localized to thermal crossover</a><br/>
+		    PJD Crowley, A Chandran<br/>
+		    <em>SciPost Physics</em>, 12, 201 (2022)
+		</li>
+		<li>
+		    <a href="https://doi.org/10.1103/PhysRevLett.131.106301" target="_blank">Phenomenology of the prethermal many-body localized regime</a><br/>
+		    DM Long, PJD Crowley, V Khemani, A Chandran<br/>
+		    <em>Physical Review Letters</em>, 131(10), 106301 (2023)
+		</li>
+		<li>
+		    <a href="https://doi.org/10.1103/PhysRevResearch.2.033262" target="_blank">Avalanche induced coexisting localized and thermal regions in disordered chains</a><br/>
+		    PJD Crowley, A Chandran<br/>
+		    <em>Physical Review Research</em>, 2(3), 033262 (2020)
+		</li>
+	</ul>
+
+	<h3>Topology in quantum dynamics</h3>
+
+	<div class="media-right">
+	    <div class="media-text prose">
+	        <p>
+	            Certain crystalline solids are known to have topological phases, in which their electromagnetic response is quantised. It was for this surprising discovery that the 2016 Nobel prize was awarded. Topological quantisation is appealing as it leads to physics that is extremely robust to the presence of perturbations, disorder, thermal excitation and interactions. Secondly, it is also known that dynamical systems can also exhibit phases and transitions between them. A natural question is: can these dynamical phases also exhibit topological quantisation?
+	        </p>
+	    </div>
+
+	    <figure class="media-figure square" style="width: 300px; align-self: center;">
+	        <img src="images/NV_qubit.png" alt="Topology in diamonds" style="width: 300px; height: auto; object-fit: contain; align-self: center;">
+	        <figcaption>Measuring the topological quantisation in the dynamics of a nitrogen vacancy centre <a href="https://doi.org/10.1103/PhysRevLett.125.160505" target="_blank">in collaboration with Sushkov group</a>.</figcaption>
+	    </figure>
+	</div>
+
+	<p>
+    	I am interested in the landscape and classification of topological driven quantum phases, and in finding ways that this extremely robust physics can be used to develop robust protocols, e.g. for robust quantum state preparation or information processing.
+    </p>
+    <h4>Selected works</h4>
+    <ul>
+    	<li>
+			<a href="https://doi.org/10.48550/arXiv.2510.01306" target="_blank">Chiral quantum state circulation from photon lattice topology</a><br/>
+          	S Bandyopadhyay, A Chandran, PJD Crowley<br/>
+			<em>arXiv:2510.01306</em>
+		</li>
+        <li>
+			<a href="https://doi.org/10.1103/PhysRevLett.126.106805" target="_blank">Nonadiabatic topological energy pumps with quasiperiodic driving</a><br/>
+			DM Long, PJD Crowley, A Chandran<br/>
+			<em>Physical Review Letters</em>, 126(10), 106805 (2021)
+        </li>
+        <li>
+			<a href="https://doi.org/10.1103/PhysRevLett.125.100601" target="_blank">Half-Integer quantized topological response in quasiperiodically driven quantum systems</a><br/>
+      		PJD Crowley, I Martin, A Chandran<br/>
+			<em>Physical Review Letters</em>, 125(10), 100601 (2020)
+    	</li>
+    </ul>
+
+	<h3>Quantum and low dimensional materials</h3>
+
+	<p>
+		Engineered solids now let us build electronic systems to order. Stacking atomically thin sheets with a small twist produces moiré materials, in which a long-wavelength pattern reshapes how electrons move and interact, giving rise to strongly correlated phases — including superconductivity — that are absent in the constituent materials. These platforms are remarkably tunable: the same device can be dialled between very different electronic phases.
+	</p>
+
+	<div class="media-right">
+	    <div class="media-text prose">
+	        <p>
+	            I am interested in what new physics these systems realise, and in how external drives, such as light, can be used to switch order on and off. My work has uncovered exotic regimes of magnetic breakdown at experimentally accessible fields, identified superconductivity in a tunable moiré quasicrystal, and studied how superconductors respond to light — a route towards using a material's intrinsic properties for signal transduction.
+	        </p>
+	    </div>
+
+		<figure class="media-figure square" style="width: 300px; align-self: center;">
+		    <img src="images/strained_moire.png" alt="Moiré quantum material" style="width: 300px; height: auto; object-fit: contain;">
+		    <figcaption>Under strain, certain <a href="https://doi.org/10.1103/PhysRevLett.132.246402" target="_blank">moiré materials develop highly anisotropic transport properties</a></figcaption>
+		</figure>
+	</div>
+
+	<h4>Selected works</h4>
+	<ul>
+	    <li>
+	        <a href="https://doi.org/10.1038/s41586-023-06294-z" target="_blank">Superconductivity and strong interactions in a tunable moiré quasicrystal</a><br/>
+	        A Uri, SC de la Barrera, MT Randeria, D Rodan-Legrain, T Devakul, PJD Crowley, N Paul, K Watanabe, T Taniguchi, R Lifshitz, L Fu, RC Ashoori, P Jarillo-Herrero<br/>
+	        <em>Nature</em>, 620, 762–767 (2023)
+	    </li>
+	    <li>
+	        <a href="https://doi.org/10.1103/PhysRevLett.132.246402" target="_blank">Directional localization from a magnetic field in moiré systems</a><br/>
+	        N Paul, PJD Crowley, L Fu<br/>
+	        <em>Physical Review Letters</em>, 132(24), 246402 (2024)
+	    </li>
+	    <li>
+	        <a href="https://doi.org/10.1103/PhysRevLett.129.116804" target="_blank">Moiré Landau fans and magic zeros</a><br/>
+	        N Paul, PJD Crowley, T Devakul, L Fu<br/>
+	        <em>Physical Review Letters</em>, 129(11), 116804 (2022)
+	    </li>
+	    <li>
+	        <a href="https://doi.org/10.1103/PhysRevB.106.214526" target="_blank">Supercurrent induced resonant optical response</a><br/>
+	        PJD Crowley, L Fu<br/>
+	        <em>Physical Review B</em>, 106(21), 214526 (2022)
+	    </li>
+	</ul>
+
+	<h3>Quasiperiodicity, fractality, hyperuniformity and disorder</h3>
+
+	<div class="media-right">
+	    <div class="media-text prose">
+	        <p>
+	            In solid state physics the simplest model of many solids is the perfect crystal. In practice, deviations from this perfect arrangement are unavoidable. Sometimes these deviations are random, but not always: in incommensurate systems, two regular patterns are superimposed with no common period. A prominent example is the moiré pattern produced by two graphene sheets rotated slightly with respect to one another.
+	        </p>
+	        <p>
+	            My work in this area has uncovered new critical points and phase transitions that sit between the well-studied clean and randomly-disordered limits. A striking example arises in the Hofstadter model, where we showed the critical physics is extremely exotic and controlled by a chaotic renormalisation group flow.
+	        </p>
+	    </div>
+
+	    <figure class="media-figure square" style="width: 300px; align-self: center;">
+	        <img src="images/butterfly.png" alt="Moiré pattern" style="width: 300px; height: auto; object-fit: contain;">
+	        <figcaption>Self similarity of the Hofstadter butterfly, where <a href="https://doi.org/10.48550/arXiv.2206.02810" target="_blank">we uncovered an exotic chaotic renormalisation group flow</a></figcaption>
+	    </figure>
+	</div>
+  	<h4>Selected works</h4>
+	<ul>
+		<li>
+		    <a href="https://doi.org/10.48550/arXiv.2206.02810" target="_blank">Non-power-law universal scaling in incommensurate systems</a><br/>
+		    L Yeo, PJD Crowley<br/>
+		    <em>arXiv:2206.02810</em>
+		</li>
+		<li>
+		    <a href="https://doi.org/10.1103/PhysRevB.100.134206" target="_blank">Quantum criticality in Ising chains with random hyperuniform couplings</a><br/>
+		    PJD Crowley, CR Laumann, S Gopalakrishnan<br/>
+		    <em>Physical Review B</em>, 100(13), 134206 (2019)
+		</li>
+		<li>
+		    <a href="https://doi.org/10.1103/PhysRevLett.120.175702" target="_blank">Quasiperiodic quantum Ising transitions in 1D</a><br/>
+		    PJD Crowley, A Chandran, CR Laumann<br/>
+		    <em>Physical Review Letters</em>, 120(17), 175702 (2018)
+		</li>
+	</ul>
+
+	</div>
+</section>
